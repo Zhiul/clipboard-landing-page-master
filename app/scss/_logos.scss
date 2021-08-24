@@ -1,0 +1,34 @@
+@use 'mixins' as *;
+
+.logos{
+    margin-bottom: 8.125rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint-up(large){
+        display: flex;
+        margin: 0 auto;
+        height: 21.5rem;
+        width: clamp(60.3125rem, 77vw , 69.4375rem);
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    li{
+        &:not(:last-child){
+        margin-bottom: 3.75rem;
+    }
+    }
+    
+        img{
+            transform: scale(0.84);
+            display: inline-block;
+        }
+
+        #vector-graphics{
+            transform: translateY(-30px) scale(0.84);  
+        }
+    }
+

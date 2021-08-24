@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.clipboard{
+    margin-bottom: 5.8125rem;
+
+    &__description{
+        margin-bottom: 3.8125rem;
+    }
+    
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 19.375rem;
+        height: auto;
+
+        @include breakpoint-up(large){
+            width: 50.625rem;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'globals' as *;
+@use 'mixins' as *;
+
+.header{
+    margin-bottom: 9rem;
+
+    &__image{
+        position: relative;
+        width: 100%;
+        height: clamp(22.6875rem, 23rem, 24rem);
+        background-image: url('/images/bg-header-mobile.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+
+        @include breakpoint-up(large){
+            background-image: url('/images/bg-header-desktop.png');          
+            }
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url('/images/logo.svg');
+            width: 7.8125rem;
+            height: 7.8125rem;
+        }
+    }
+
+    &__title{
+        font-size: 1.85rem;
+        margin-top: -3.09rem;
+
+
+        @include breakpoint-up(large){
+            font-size: 2.5625rem;
+        }
+    }
+}
